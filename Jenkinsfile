@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        giurl = 'https://github.com/shinrah/JenkinsPipelineDemoProject.git'
+        giurl = 'https://github.com/shinrah/javaparser-maven-sample.git'
         gitBranch = "${params.GIT_Branch_Tag}"
         formattedGitBranch = "${params.GIT_Branch_Tag}" // Adjust if formatting is needed
     }
