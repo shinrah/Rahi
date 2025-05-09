@@ -9,8 +9,8 @@ pipeline {
 
     parameters {
         choice choices: ['Deploy', 'stop', 'start', 'restart'], name: 'mode', description: 'Choose mode for deployment or starting the application server'
-        choice choices: ['DEV', 'master', 'UAT'], name: 'host', description: 'Choose environment to deploy master'
-        choice choices: ['DEV', 'master', 'feature-branch', 'UAT'], name: 'GIT_Branch_Tag', description: 'Select Git branch to deploy'
+        choice choices: ['DEV', 'master', 'main'], name: 'host', description: 'Choose environment to deploy master'
+        choice choices: ['DEV', 'main', 'feature-branch', 'UAT'], name: 'GIT_Branch_Tag', description: 'Select Git branch to deploy'
     }
 
     stages {
