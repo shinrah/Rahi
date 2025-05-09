@@ -66,10 +66,15 @@ pipeline {
                         ])
                     }
                 }
+            }
+        }
 
-                stage('building Scope JAVA'){
-                    echo 'Exucuting scope JAVA Build'
-                    artifactsbuildMaven.run pom: 'pom.xml', goals: 'clean install'
+        stage('Building Scope JAVA') {
+            steps {
+                script {
+                    echo 'Executing Scope JAVA Build'
+                    // Use Maven to build the project
+                    sh 'mvn clean install'
                 }
             }
         }
